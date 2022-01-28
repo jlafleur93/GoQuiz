@@ -13,6 +13,8 @@ func main() {
 	flag.Parse()
 	_ = csvFile
 
+	flagTimer := flag.String("timer")
+
 	file, err := os.Open(*csvFile)
 	if err != nil {
 		exitPrint(fmt.Sprintf("Failed to open the CSV file: %s\n", *csvFile ))
